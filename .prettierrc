@@ -1,0 +1,21 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true,
+  "prettier.printWidth": 80,
+  "prettier.tabWidth": 2,
+  "prettier.useTabs": false,
+  "prettier.semi": false,
+  "prettier.trailingComma": "es5",
+  "prettier.bracketSpacing": true,
+  "prettier.jsxBracketSameLine": false,
+  "prettier.htmlWhitespaceSensitivity": "css",
+  "prettier.cssEnable": ["css", "scss", "less"],
+  "prettier.jsEnable": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "files.autoSave": "onFocusChange"
+}
