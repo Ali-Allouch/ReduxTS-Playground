@@ -1,11 +1,9 @@
-import { SetStateAction } from 'react'
-
-export interface RoutesProps {
+export interface RouterProps {
   isAuthenticated: boolean
-  setIsAuthenticated: React.Dispatch<SetStateAction<boolean>>
+  login: () => void
 }
 
-export const useRouter = (props: RoutesProps) => {
+export const useRouter = (props: RouterProps) => {
   return {
     ...props,
   }

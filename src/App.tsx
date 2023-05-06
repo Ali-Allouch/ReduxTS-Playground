@@ -1,16 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './App.css'
 import Router from 'router/Router'
+import useAuth from 'hooks/useAuth'
 
 function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false)
+  const { isAuthenticated, login } = useAuth()
 
   return (
     <div className='App'>
-      <Router
-        isAuthenticated={isAuthenticated}
-        setIsAuthenticated={setIsAuthenticated}
-      />
+      <Router isAuthenticated={isAuthenticated} login={login} />
     </div>
   )
 }

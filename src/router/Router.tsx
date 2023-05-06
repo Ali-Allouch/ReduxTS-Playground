@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { useRouter, RoutesProps } from './useRouter'
+import { useRouter, RouterProps } from './useRouter'
 import PrivateRoute from 'components/PrivateRoute/PrivateRoute'
 import Layout from 'components/Layout/Layout'
 import Home from 'screens/Home/Home'
@@ -10,8 +10,8 @@ import Products from 'screens/Products/Products'
 import Profile from 'screens/Profile/Profile'
 import NotFound from 'screens/NotFound/NotFound'
 
-const Router: React.FC<RoutesProps> = (props: RoutesProps) => {
-  const { isAuthenticated, setIsAuthenticated } = useRouter(props)
+const Router: React.FC<RouterProps> = (props: RouterProps) => {
+  const { isAuthenticated, login } = useRouter(props)
 
   return (
     <BrowserRouter>
@@ -19,10 +19,7 @@ const Router: React.FC<RoutesProps> = (props: RoutesProps) => {
         <Routes>
           {/* Public Routes */}
           <Route path='/' element={<Home />} />
-          <Route
-            path='/Login'
-            element={<Login setIsAuthenticated={setIsAuthenticated} />}
-          />
+          <Route path='/Login' element={<Login login={login} />} />
           <Route path='/SignUp' element={<SignUp />} />
           <Route path='/Products' element={<Products />} />
 

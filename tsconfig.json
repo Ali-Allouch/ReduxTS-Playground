@@ -21,7 +21,8 @@
       "screens/*": ["screens/*"],
       "services/*": ["store/services/*"],
       "actions/*": ["store/actions/*"],
-      "reducers/*": ["store/reducers/*"]
+      "reducers/*": ["store/reducers/*"],
+      "hooks/*": ["hooks/*"]
     }
   },
   "include": ["src"]

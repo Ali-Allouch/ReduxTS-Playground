@@ -1,7 +1,5 @@
-import { SetStateAction } from "react"
-
 export interface LoginProps {
-  setIsAuthenticated: React.Dispatch<SetStateAction<boolean>>
+  login: () => void
 }
 
 export const useLogin = (props: LoginProps) => {
