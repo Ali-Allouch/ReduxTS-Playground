@@ -5,6 +5,10 @@ import App from './App'
 import reportWebVitals from './reportWebVitals'
 import { Provider } from 'react-redux'
 import store from './store/store'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css.map'
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'
+import 'bootstrap/dist/js/bootstrap.bundle.min.js.map'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
