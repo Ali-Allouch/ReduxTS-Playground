@@ -10,7 +10,7 @@ const PrivateRoute: React.FC<PrivateRouteProps> = (
   return isAuthenticated ? (
     <Fragment>{element}</Fragment>
   ) : (
-    <Navigate to='/login' replace />
+    <Navigate to='/Login' replace />
   )
 }
 
