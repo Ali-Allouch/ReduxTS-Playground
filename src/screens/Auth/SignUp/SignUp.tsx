@@ -5,9 +5,9 @@ const SignUp: React.FC<SignUpProps> = (props: SignUpProps) => {
   const {} = useSignUp(props)
 
   return (
-    <div>
+    <main>
       <h1>Sign Up</h1>
-    </div>
+    </main>
   )
 }
 

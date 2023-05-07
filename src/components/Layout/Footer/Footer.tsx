@@ -5,9 +5,9 @@ const Footer: React.FC<FooterProps> = (props: FooterProps) => {
   const {} = useFooter(props)
 
   return (
-    <div>
+    <footer>
       <h1>Footer</h1>
-    </div>
+    </footer>
   )
 }
 

@@ -5,9 +5,9 @@ const Profile: React.FC<ProfileProps> = (props: ProfileProps) => {
   const {} = useProfile(props)
 
   return (
-    <div>
+    <main>
       <h1>Profile</h1>
-    </div>
+    </main>
   )
 }
 

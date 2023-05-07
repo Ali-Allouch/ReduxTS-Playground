@@ -1,14 +1,14 @@
 import React from 'react'
 import { useHome, HomeProps } from './useHome'
-import './Home.scss'
+import styles from './Home.module.scss'
 
 const Home: React.FC<HomeProps> = (props: HomeProps) => {
   const {} = useHome(props)
 
   return (
-    <div className='main'>
+    <main className={styles.main}>
       <h1>Home</h1>
-    </div>
+    </main>
   )
 }
 

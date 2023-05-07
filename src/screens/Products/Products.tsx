@@ -5,9 +5,9 @@ const Products: React.FC<ProductsProps> = (props: ProductsProps) => {
   const {} = useProducts(props)
 
   return (
-    <div>
+    <main>
       <h1>Products</h1>
-    </div>
+    </main>
   )
 }
 

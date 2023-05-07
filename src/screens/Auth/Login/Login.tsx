@@ -5,9 +5,9 @@ const Login: React.FC<LoginProps> = (props: LoginProps) => {
   const {} = useLogin(props)
 
   return (
-    <div>
+    <main>
       <h1>Login</h1>
-    </div>
+    </main>
   )
 }
 
