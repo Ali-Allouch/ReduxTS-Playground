@@ -19,10 +19,12 @@
     "paths": {
       "components/*": ["components/*"],
       "screens/*": ["screens/*"],
-      "services/*": ["store/services/*"],
-      "actions/*": ["store/actions/*"],
-      "reducers/*": ["store/reducers/*"],
-      "hooks/*": ["hooks/*"]
+      "services/*": ["services/*"],
+      "actions/*": ["actions/*"],
+      "reducers/*": ["reducers/*"],
+      "hooks/*": ["hooks/*"],
+      "config/*": ["config/*"],
+      "utils/*": ["utils/*"]
     }
   },
   "include": ["src"]

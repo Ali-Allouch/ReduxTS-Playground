@@ -1,4 +1,5 @@
 interface ILogin {
+  Id?: number | null
   Email: string
   Password: string
 }

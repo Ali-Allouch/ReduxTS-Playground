@@ -1,26 +1,15 @@
-import { useState } from 'react'
+import { useSelector } from 'react-redux'
+import { RootState } from 'reducers/rootReducer'
+import { AuthState } from 'reducers/auth.reducer'
 
-interface AuthState {
-  isAuthenticated: boolean
-  login: () => void
-  logout: () => void
-}
-
-const useAuth = (): AuthState => {
-  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false)
-
-  const login = (): void => {
-    setIsAuthenticated(true)
-  }
-
-  const logout = (): void => {
-    setIsAuthenticated(false)
-  }
+const useAuth = () => {
+  const authState = useSelector((state: RootState) => state.auth) as AuthState
+  const isAuthenticated =
+    authState.IsLoggedIn === 'true' ||
+    localStorage.getItem('IsLoggedIn') === 'true'
 
   return {
     isAuthenticated,
-    login,
-    logout,
   }
 }
 

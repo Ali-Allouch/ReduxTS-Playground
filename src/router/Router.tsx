@@ -11,7 +11,7 @@ import Profile from 'screens/Profile/Profile'
 import NotFound from 'screens/NotFound/NotFound'
 
 const Router: React.FC<RouterProps> = (props: RouterProps) => {
-  const { isAuthenticated, login } = useRouter(props)
+  const { isAuthenticated } = useRouter(props)
 
   return (
     <BrowserRouter>
@@ -19,7 +19,7 @@ const Router: React.FC<RouterProps> = (props: RouterProps) => {
         <Routes>
           {/* Public Routes */}
           <Route path='/' element={<Home />} />
-          <Route path='/Login' element={<Login login={login} />} />
+          <Route path='/Login' element={<Login />} />
           <Route path='/SignUp' element={<SignUp />} />
           <Route path='/Products' element={<Products />} />
 

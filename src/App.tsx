@@ -4,11 +4,11 @@ import Router from 'router/Router'
 import useAuth from 'hooks/useAuth'
 
 function App() {
-  const { isAuthenticated, login } = useAuth()
+  const { isAuthenticated } = useAuth()
 
   return (
     <div className='App'>
-      <Router isAuthenticated={isAuthenticated} login={login} />
+      <Router isAuthenticated={isAuthenticated} />
     </div>
   )
 }
