@@ -1,4 +1,4 @@
-import { loginSuccess } from 'reducers/auth.reducer'
+import { loginSuccess, logout } from 'reducers/auth.reducer'
 import { authService } from 'services/auth.service'
 import { Dispatch } from 'redux'
 import ILogin from 'models/Auth/ILogin'
@@ -15,3 +15,7 @@ export const loginUser =
       // Handle login error
     }
   }
+
+export const logoutUser = () => (dispatch: Dispatch) => {
+  dispatch(logout())
+}

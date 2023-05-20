@@ -3,7 +3,7 @@ import { useHeader, HeaderProps } from './useHeader'
 import { NavLink } from 'react-router-dom'
 
 const Header: React.FC<HeaderProps> = (props: HeaderProps) => {
-  const { isAuthenticated } = useHeader(props)
+  const { isAuthenticated, handleLogout } = useHeader(props)
 
   return (
     <header>
@@ -46,6 +46,15 @@ const Header: React.FC<HeaderProps> = (props: HeaderProps) => {
                 </NavLink>
               </li>
             </ul>
+            <form
+              className={`d-flex ${!isAuthenticated && 'd-none'}`}
+              role='logout'
+              onSubmit={handleLogout}
+            >
+              <button className='btn btn-outline-danger' type='submit'>
+                Logout
+              </button>
+            </form>
           </div>
         </div>
       </nav>
