@@ -29,4 +29,22 @@ export const authService = {
       throw new Error('Login failed')
     }
   },
+  signup: async (credentials: IUser): Promise<IAuthResponse> => {
+    try {
+      const encryptedPassword = await encryptPassword(credentials.Password)
+      const encryptedCredentials = {
+        ...credentials,
+        Password: encryptedPassword,
+      }
+
+      const response: IAuthResponse = await makeRequest(
+        'POST',
+        AUTH_ENDPOINTS.SIGNUP,
+        encryptedCredentials
+      )
+      return response
+    } catch (error) {
+      throw new Error('Signup failed')
+    }
+  },
 }

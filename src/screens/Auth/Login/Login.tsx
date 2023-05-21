@@ -1,10 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { useLogin, LoginProps } from './useLogin'
 import { Navigate } from 'react-router-dom'
 
 const Login: React.FC<LoginProps> = (props: LoginProps) => {
-  const { isAuthenticated, handleSubmit } =
-    useLogin(props)
+  const { isAuthenticated, handleSubmit } = useLogin(props)
 
   return !isAuthenticated ? (
     <main>
@@ -40,8 +40,14 @@ const Login: React.FC<LoginProps> = (props: LoginProps) => {
                 required
               />
             </div>
-            <div className='col-12 text-center'>
+            <div className='col-12 text-center mb-2'>
               <button className='btn btn-primary'>Login</button>
+            </div>
+            <div className='col-12 text-center'>
+              Don&apos;t have an account?{' '}
+              <Link to='/SignUp' className='text-decoration-none'>
+                Signup here!
+              </Link>
             </div>
           </div>
         </form>
