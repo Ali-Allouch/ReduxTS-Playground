@@ -3,7 +3,7 @@ import { useLogin, LoginProps } from './useLogin'
 import { Navigate } from 'react-router-dom'
 
 const Login: React.FC<LoginProps> = (props: LoginProps) => {
-  const { credentials, isAuthenticated, handleChange, handleSubmit } =
+  const { isAuthenticated, handleSubmit } =
     useLogin(props)
 
   return !isAuthenticated ? (
@@ -25,8 +25,6 @@ const Login: React.FC<LoginProps> = (props: LoginProps) => {
                   type='email'
                   id='Email'
                   className='form-control'
-                  value={credentials.Email}
-                  onChange={handleChange}
                   required
                 />
               </div>
@@ -39,8 +37,6 @@ const Login: React.FC<LoginProps> = (props: LoginProps) => {
                 type='password'
                 id='Password'
                 className='form-control'
-                value={credentials.Password}
-                onChange={handleChange}
                 required
               />
             </div>
